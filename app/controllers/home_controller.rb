@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
   def new
+        @survey = Survey.new
   end
 
   def create
@@ -9,9 +10,6 @@ end
 
 
   def form
-    @survey = Survey.new
-    if request.post?
-      redirect_to home_create
   end
 
   private def survey_params
